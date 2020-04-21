@@ -9,6 +9,5 @@ Pokemon Fans
 
 ## Wireframe
 
-
 ![WireFrame 1](/Wireframe1.png)
 ![WireFrame 2](/Wireframe2.png)
