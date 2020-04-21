@@ -8,4 +8,4 @@ An App that educates people on pokemon. Curious fans want to know everything abo
 Pokemon Fans
 
 ## Wireframe
-![alt text](https://xd.adobe.com/view/4455ecaa-91ec-4595-4463-6a6ae24be516-3264/ "Logo Title Text 1")
+https://xd.adobe.com/view/4455ecaa-91ec-4595-4463-6a6ae24be516-3264/
