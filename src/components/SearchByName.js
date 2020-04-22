@@ -24,12 +24,21 @@ class SearchByName extends Component {
         console.log("aaaaa", pokemon);
         this.setState({
             name: pokemon.data.species.name,
-            type: pokemon.data.types[0],
-            type2: pokemon.data.types[1]
+            type: pokemon.data.types[0].type.name,
+            type2: pokemon.data.types[1].type.name,
+            id: pokemon.data.id,
+            speed: pokemon.data.stats[0].base_stat,
+            specialDefense: pokemon.data.stats[1].base_stat,
+            specialAttack: pokemon.data.stats[2].base_stat,
+            height: pokemon.data.height,
+            weight: pokemon.data.weight
+
         })
-        console.log(this.state.name);
+        console.log(this.state.name)
         console.log(this.state.type);
         console.log(this.state.type2);
+        console.log(this.state.id);
+        console.log(this.state.specialDefense)
         } catch(e) {
             console.error(e)
         }
