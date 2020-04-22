@@ -14,4 +14,4 @@ class SearchByName extends Component {
     }
 }
 
-export default SearchByName
+export default SearchByName;
