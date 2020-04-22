@@ -9,19 +9,24 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="">Previous<br></br>Pokemon</Link>
-            </li>
-          </ul>
-        </nav>
-        
-      </div>
+      <Router>
+        <div className="App">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">Previous<br></br>Pokemon</Link>
+              </li>
+              <li>
+                <Link to="/">Next<br/>Pokemon</Link>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </Router>
     )
   }
 }
