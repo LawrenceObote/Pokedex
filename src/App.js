@@ -30,6 +30,12 @@ class App extends Component {
           </nav>
         </div>
 
+        <Switch>
+          <Route>
+            
+          </Route>
+        </Switch>
+
         <div>
           <h1 id="welcome">Welcome to your Pokedex</h1>
         </div>
