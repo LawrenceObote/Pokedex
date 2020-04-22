@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
 import './App.css';
+import SearchByName from './components/SearchByName'
 
 class App extends Component {
   constructor(props) {
@@ -27,14 +28,14 @@ class App extends Component {
               </li>
             </ul>
           </nav>
-        </div>
 
-        <div>
-          <h1 id="welcome">Welcome to your Pokedex</h1>
-        </div>
+          <div>
+            <h1 id="welcome">Welcome to your Pokedex</h1>
+          </div>
 
-        <div>
-          <SearchByName />
+          <div>
+            <SearchByName />
+          </div>
         </div>
       </Router>
     )
