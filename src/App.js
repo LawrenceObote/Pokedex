@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          
+          <div>
           <nav>
             <ul id="nav">
               <li>
@@ -28,14 +28,15 @@ class App extends Component {
               </li>
             </ul>
           </nav>
+        </div>
 
-          <div>
-            <h1 id="welcome">Welcome to your Pokedex</h1>
-          </div>
+        <div>
+          <h1 id="welcome">Welcome to your Pokedex</h1>
+        </div>
 
-          <div>
-            <SearchByName />
-          </div>
+        <div>
+          <SearchByName />
+        </div>
         </div>
       </Router>
     )
