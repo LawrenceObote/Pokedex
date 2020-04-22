@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 export default class PokemonPage extends Component {
     constructor(props){
@@ -6,8 +7,24 @@ export default class PokemonPage extends Component {
     }
 
     state = {
-        
+        name: "",
+        type: "",
+        image: "",
+        Weight: "",
+        orderNumber: 0,
+        stats: "",
+        height: ""
     }
+
+    getData = async () => {
+        try {
+            const pokemon = await axios.get('https://pokeapi.co/api/v2/pokemon/');
+            console.log(pokemon.data);
+        } catch(e) {
+            console.error(e);
+        }
+    } 
+
 
     render() {
         return (
