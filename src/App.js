@@ -32,6 +32,10 @@ class App extends Component {
         <div>
           <h1 id="welcome">Welcome to your Pokedex</h1>
         </div>
+
+        <div>
+          <SearchByName />
+        </div>
       </Router>
     )
   }
