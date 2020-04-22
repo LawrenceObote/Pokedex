@@ -21,7 +21,6 @@ class SearchByName extends Component {
         try {
         const pokemon = await axios.get('https://pokeapi.co/api/v2/pokemon/bulbasaur/')
 
-        console.log("aaaaa", pokemon);
         this.setState({
             name: pokemon.data.species.name,
             type: pokemon.data.types[0].type.name,
@@ -30,15 +29,13 @@ class SearchByName extends Component {
             speed: pokemon.data.stats[0].base_stat,
             specialDefense: pokemon.data.stats[1].base_stat,
             specialAttack: pokemon.data.stats[2].base_stat,
+            defense: pokemon.data.stats[3].base_stat,
+            attack: pokemon.data.stats[4].base_stat,
+            hp: pokemon.data.stats[5].base_stat,
             height: pokemon.data.height,
             weight: pokemon.data.weight
 
         })
-        console.log(this.state.name)
-        console.log(this.state.type);
-        console.log(this.state.type2);
-        console.log(this.state.id);
-        console.log(this.state.specialDefense)
         } catch(e) {
             console.error(e)
         }
