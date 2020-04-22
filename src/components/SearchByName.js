@@ -16,9 +16,9 @@ class SearchByName extends Component {
         console.log(pokemonName)
     }
 
-    onSubmit = (pokemonName) => {
-        <Redirect to={ '/${pokemonName}'} /> 
-    }
+    // onSubmit = (pokemonName) => {
+    //     <Redirect to={ '/${pokemonName}'} /> 
+    // }
     // goToPokemon = async (e) => {
     //     try {
     //         const pokemon = await get('https://pokeapi.co/api/v2/pokemon/' + pokemonName);
