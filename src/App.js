@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import SearchByName from './components/SearchByName'
+import PokemonPage from './PokemonPage'
 
 class App extends Component {
   constructor(props) {
     super(props);
   }
-
+state = {
+  name: "",
+  value: ""
+}
 
 
   render() {
@@ -21,18 +25,18 @@ class App extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/">Previous<br></br>Pokemon</Link>
+                <Link to="/pokemon">Previous<br></br>Pokemon</Link>
               </li>
               <li>
-                <Link to="/">Next<br/>Pokemon</Link>
+                <Link to="/pokemon">Next<br/>Pokemon</Link>
               </li>
             </ul>
           </nav>
         </div>
 
         <Switch>
-          <Route>
-            
+          <Route path="/pokemon">
+            <PokemonPage />
           </Route>
         </Switch>
 
