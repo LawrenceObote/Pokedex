@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import PokemonPage from '../PokemonPage'
+import { Redirect } from 'react-router-dom'
 
 class SearchByName extends Component {
     constructor(props){
@@ -8,7 +9,9 @@ class SearchByName extends Component {
     }
 
     state = {
-        value: ""
+        value: "",
+        toPokemon: false
+
     }
     
 
@@ -60,7 +63,7 @@ class SearchByName extends Component {
         this.setState({
             name: pokemon.data.species.name,
             type: pokemon.data.types[0].type.name,
-            // type2: pokemon.data.types[1].type.name,
+            type2: "",
             id: pokemon.data.id,
             speed: pokemon.data.stats[0].base_stat,
             specialDefense: pokemon.data.stats[1].base_stat,
@@ -123,16 +126,37 @@ class SearchByName extends Component {
     //     return pokemon;
     // }
 
+
     
 
     render() {
         return (
             <div>
-                <form onSubmit={this.storePokemon}>
+                <form >
                     {/* <label htmlFor="name">Enter Name</label>
                     <input type="text" value={this.state.value} onChange={this.storePokemon} placeholder="Enter Pokemon Name"></input> */}
                     {/* <button type="submit" value="submit" onSubmit={this.getData}>Search By Name</button>
                     <button type="submit" onSubmit={this.getData}></button> */}
+                    <input
+                value={this.state.value}
+                onChange={e => this.onChangeHandler(e)}
+                placeholder="Enter Pokemon"
+                />
+                {/* {this.renderPokemon} */}
+                <PokemonPage
+                name={this.state.name}
+                type={this.state.type}
+                type2={this.state.type2}
+                id={this.state.id}
+                speed={this.state.speed}
+                specialDefense={this.state.specialDefense}
+                specialAttack={this.state.specialAttack}
+                defense={this.state.defense}
+                attack={this.state.attack}
+                hp={this.state.hp}
+                height={this.state.height}
+                weight={this.state.weight} />
+                    <button type="submit">Submit</button>
                 </form>
                 <input
                 value={this.state.value}
