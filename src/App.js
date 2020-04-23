@@ -64,18 +64,16 @@ getData = async (e, value) => {
         </div>
 
         <Switch>
-          <Route path="/pokemon">
-            <PokemonPage />
+          <Route path="/" exact component={"/"}>
+            <SearchByName />
+            
+          </Route>
+          <Route path="/pokemon" exact component={"/pokemon"}>
+            <SearchByName />
+            
           </Route>
         </Switch>
 
-        <div>
-          <h1 id="welcome">Welcome to your Pokedex</h1>
-        </div>
-
-        <div>
-          <SearchByName />
-        </div>
         </div>
       </Router>
     )
