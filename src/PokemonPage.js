@@ -30,7 +30,7 @@ export default class PokemonPage extends Component {
         return (
             <div>
                 <div>
-                    <h1>Pokemon<br/>Name</h1>
+                    <h1>Pokemon<br/>{this.props.name}</h1>
                 </div>
                 <div>
                     <h2>Type: </h2>
