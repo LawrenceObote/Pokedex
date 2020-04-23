@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import PokemonPage from '../PokemonPage'
+import { Redirect } from 'react-router-dom'
 
 class SearchByNumber extends Component {
     constructor(props){
@@ -8,11 +9,12 @@ class SearchByNumber extends Component {
     }
 
     state = {
-        value: ""
+        value: "",
+        toPokemon: null
     }
 
     search = async value => {
-        this.setState({loading: true});
+        
         const pokemon = await axios.get(
             `https://pokeapi.co/api/v2/pokemon/${value}/`
         );
@@ -21,7 +23,7 @@ class SearchByNumber extends Component {
         this.setState({
             name: pokemon.data.species.name,
             type: pokemon.data.types[0].type.name,
-            // type2: pokemon.data.types[1].type.name,
+            type2: "",
             id: pokemon.data.id,
             speed: pokemon.data.stats[0].base_stat,
             specialDefense: pokemon.data.stats[1].base_stat,
@@ -64,16 +66,13 @@ class SearchByNumber extends Component {
     };
 
 
-
+    
     render() {
+        if (this.state.toPokemon) {
+            return <Redirect to={this.state.toPokemon} />
+        }
         return (
             <div>
-                <form onSubmit={this.storePokemon}>
-                    {/* <label htmlFor="name">Enter Name</label>
-                    <input type="text" value={this.state.value} onChange={this.storePokemon} placeholder="Enter Pokemon Name"></input> */}
-                    {/* <button type="submit" value="submit" onSubmit={this.getData}>Search By Name</button>
-                    <button type="submit" onSubmit={this.getData}></button> */}
-                </form>
                 <input
                 value={this.state.value}
                 onChange={e => this.onChangeHandler(e)}
