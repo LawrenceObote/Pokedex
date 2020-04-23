@@ -27,10 +27,11 @@ export default class PokemonPage extends Component {
 
 
     render() {
+        console.log(this.props);
         return (
             <div>
                 <div>
-                    <h1>Pokemon<br/>{this.props.name}</h1>
+                    <h1>Pokemon: <br/>{this.props.name}</h1>
                 </div>
                 <div>
                     <h2>Type: </h2>
