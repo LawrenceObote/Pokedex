@@ -34,14 +34,14 @@ export default class PokemonPage extends Component {
                     <h1>Pokemon: <br/>{this.props.name}</h1>
                 </div>
                 <div>
-                    <h2>Type: </h2>
+                    <h2>Type: {this.props.type}</h2>
                     {/* <img>Sprite</img> */}
-                    <h2>Weight: </h2>
+                    <h2>Weight: {this.props.weight}</h2>
                 </div>
                 <div>
-                    <h2>Order Number: </h2>
+                    <h2>Order Number: {this.props.id}</h2>
                     <h2>Stats: </h2>
-                    <h2>Height: </h2>
+                    <h2>Height: {this.props.height}</h2>
                 </div>
                 
             </div>
