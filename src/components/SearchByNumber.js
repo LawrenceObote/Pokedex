@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+import PokemonPage from '../PokemonPage'
 
 class SearchByNumber extends Component {
     constructor(props){
