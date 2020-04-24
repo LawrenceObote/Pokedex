@@ -6,7 +6,7 @@ import React from 'react'
     return (
         <div>
             
-            <img src={props.image}></img>
+            <img id="image" src={props.image}></img>
             
         </div>
     )
