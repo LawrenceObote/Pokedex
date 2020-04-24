@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function AdditionalInfo(props) {
     return (
-        <div>
+        <div className="pokedex">
             <h2>name: {props.name}</h2>
             <h3>speed: {props.speed}</h3>
             <h3>Special Defense: {props.specialDefense}</h3>
