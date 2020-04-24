@@ -25,7 +25,7 @@ export default function PokemonPage(props) {
                     <h4>Order Number: {props.id}</h4>
                     <h4>Height: {props.height}</h4>
                 </div>
-                <PokemonImage />
+                
 
                 
                 
