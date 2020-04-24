@@ -72,6 +72,12 @@ class SearchByNumber extends Component {
         
         return (
             <div>
+
+                <input id="search"
+                value={this.state.value}
+                onChange={e => this.onChangeHandler(e)}
+                placeholder="Enter Pokemon"
+                />
                 
             
             <AdditionalInfo 
@@ -81,14 +87,11 @@ class SearchByNumber extends Component {
                 specialAttack={this.state.specialAttack}
                 defense={this.state.defense}
                 attack={this.state.attack}
-                hp={this.state.hp}/>
-                <div id="input">
-                <input
-                value={this.state.value}
-                onChange={e => this.onChangeHandler(e)}
-                placeholder="Enter Pokemon"
-                />
-                </div>
+                hp={this.state.hp}
+                image={this.state.image}/>
+
+                    <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
+                    <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button>
             </div>
         )
     }
