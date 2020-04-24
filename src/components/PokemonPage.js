@@ -23,7 +23,6 @@ export default function PokemonPage(props) {
                     <h4>Type2: {props.type2}</h4>
                     <h4>Weight: {props.weight}</h4>
                     <h4>Order Number: {props.id}</h4>
-                    <h4>Stats: </h4>
                     <h4>Height: {props.height}</h4>
                 </div>
                 <PokemonImage />
