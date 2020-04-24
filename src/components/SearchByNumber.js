@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Link } from "react-router-dom";
 import AdditionalInfo from './AdditionalInfo'
 import PokemonImage from './PokemonImage'
+import Button from 'react-bootstrap/Button';
 
 
 class SearchByNumber extends Component {
@@ -70,6 +70,23 @@ class SearchByNumber extends Component {
     };
 
 
+    handlePreviousPokemonButton = () => {
+        let counter = this.state.id;
+        counter = this.state.id - 1;
+        this.search(counter)
+        this.setState({ value: counter});
+        
+    }
+
+    handleNextPokemonButton = () => {
+        let counter = this.state.id;
+        counter = this.state.id + 1;
+        this.search(counter);
+        this.setState({ value: counter});
+        
+    }
+
+
     
     render() {
         
@@ -99,8 +116,8 @@ class SearchByNumber extends Component {
                     image={this.state.image}
                  />
 
-                <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
-                <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button>
+                <Button variant="dark" className="previous" onClick={this.handlePreviousPokemonButton}>Previous</Button> 
+                <Button variant="dark"  className="next" onClick={this.handleNextPokemonButton}>Next</Button>
             </div>
         )
     }

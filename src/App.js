@@ -5,6 +5,8 @@ import SearchByName from './components/SearchByName'
 import SearchByNumber from './components/SearchByNumber'
 import Home from './components/Home'
 import NavBar from "./components/NavBar"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends Component {

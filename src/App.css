@@ -34,9 +34,9 @@ margin: .5% 15%;
 
 #search {
   position: absolute;
-  top: 550px;
-  left: 460px;
-  width: 100px;
+  top: 590px;
+  left: 440px;
+  width: 150px;
   height: 25px;
   border-radius: 15px;
   border: black solid 2px;
@@ -62,6 +62,22 @@ margin: .5% 15%;
   border: black solid 2px;
 }
 
+.previous{
+  position: absolute;
+  top: 550px;
+  left: 345px;
+  width: 90px;
+  border-radius: 15px;
+}
+
+.next {
+  position: absolute;
+  top: 550px;
+  left: 570px;
+  width: 90px;
+  border-radius:15px;
+}
+
 #link-to-additional {
   position: absolute;
   top: 250px;
@@ -85,7 +101,7 @@ margin: .5% 15%;
 
 #text {
   position: absolute;
-  top: 215px;
+  top: 240px;
   left: 350px
 }
 

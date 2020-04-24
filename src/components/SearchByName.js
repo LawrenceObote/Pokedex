@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import PokemonPage from './PokemonPage'
 import PokemonImage from './PokemonImage'
+import Button from 'react-bootstrap/Button';
+
+
 
 
 class SearchByName extends Component {
@@ -179,8 +182,10 @@ class SearchByName extends Component {
                 image={this.state.image}
                  />
                 
-                <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
-                <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button>
+                {/* <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
+                <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button> */}
+                <Button variant="dark" className="previous" onClick={this.handlePreviousPokemonButton}>Previous</Button> 
+                <Button variant="dark"  className="next" onClick={this.handleNextPokemonButton}>Next</Button>
 
 
             </div>
