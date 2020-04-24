@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import PokemonPage from '../PokemonPage'
-import { Redirect } from 'react-router-dom'
-import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
+import { Link } from "react-router-dom";
 import AdditionalInfo from './AdditionalInfo'
 
 
@@ -74,7 +72,10 @@ class SearchByNumber extends Component {
         
         return (
             <div>
-            <Link  id="link-to-additional" to="/home">Home</Link>
+                <div>
+                    <Link  id="link-to-home" to="/home">Home</Link>
+                    <Link id="link-to-pokemon-page" to="/pokemon">Pokedex</Link>
+                </div>
             <div>
                 <input
                 value={this.state.value}
