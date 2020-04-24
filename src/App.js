@@ -6,6 +6,8 @@ import SearchByNumber from './components/SearchByNumber'
 import axios from 'axios'
 import Home from './components/Home'
 import PokemonPage from './components/PokemonPage'
+import PokemonImage from './components/PokemonImage'
+import AdditionalInfo from './components/AdditionalInfo'
 
 
 class App extends Component {
@@ -73,7 +75,14 @@ nextPokemon = (id) => {
 
 
           <Route path="/pokemon" exact component={"/pokemon"}>
-            <SearchByName /> 
+          <Link  id="link-to-additional" to="/pokemon2">Additional Info></Link>
+            <SearchByName />
+            
+          </Route>
+
+          <Route path="/pokemon2" exact component={"/pokemon2"}>
+          <SearchByNumber />
+          
           </Route>
 
         </Switch>
