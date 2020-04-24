@@ -102,7 +102,7 @@ class SearchByName extends Component {
     onChangeHandler = async e => {
         console.log(e.target.value);
         this.search(e.target.value);
-        this.setState({value: e.target.value})
+        this.setState({value: e.target.value.toLowerCase()})
     };
 
     // renderPokemon = () => {
@@ -173,7 +173,7 @@ class SearchByName extends Component {
                 hp={this.state.hp}
                 height={this.state.height}
                 weight={this.state.weight}
-                image={this.state.image} />
+                 />
                 
                 <PokemonImage id="image"
                 image={this.state.image}
