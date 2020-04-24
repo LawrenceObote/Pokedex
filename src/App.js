@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
-import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
+import {Route, Switch, BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import SearchByName from './components/SearchByName'
 import SearchByNumber from './components/SearchByNumber'
-import axios from 'axios'
 import Home from './components/Home'
-import PokemonPage from './components/PokemonPage'
-import PokemonImage from './components/PokemonImage'
-import AdditionalInfo from './components/AdditionalInfo'
+import NavBar from "./components/NavBar"
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-state = {
-  name: "",
-  value: "",
-  toPokemon: false,
-  id: 0
-}
+
+
 
 
 // getData = async (e, value) => {
@@ -75,12 +65,13 @@ nextPokemon = (id) => {
 
 
           <Route path="/pokemon" exact component={"/pokemon"}>
-          <Link  id="link-to-additional" to="/pokemon2">Additional Info></Link>
+          <NavBar />
             <SearchByName />
             
           </Route>
 
           <Route path="/pokemon2" exact component={"/pokemon2"}>
+            <NavBar />
           <SearchByNumber />
           
           </Route>
