@@ -40,6 +40,7 @@ margin: .5% 15%;
   height: 25px;
   border-radius: 15px;
   border: black solid 2px;
+  
 }
 
 #next {
@@ -75,7 +76,16 @@ margin: .5% 15%;
 
 #image {
   position: absolute;
-  top: 500px;
-  left: 500px;
+  top: 350px;
+  left: 825px;
+  height: 200px;
+  width: 200px;
 }
+
+#text {
+  position: absolute;
+  top: 215px;
+  left: 350px
+}
+
 
