@@ -160,7 +160,7 @@ class SearchByName extends Component {
                 placeholder="Enter Pokemon"
                 />
                 
-                 <PokemonPage id="text"
+                 <PokemonPage
                 name={this.state.name}
                 type={this.state.type}
                 type2={this.state.type2}
