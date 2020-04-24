@@ -175,7 +175,7 @@ class SearchByName extends Component {
                 weight={this.state.weight}
                 image={this.state.image} />
                 
-                <PokemonImage
+                <PokemonImage id="image"
                 image={this.state.image}
                  />
                 
