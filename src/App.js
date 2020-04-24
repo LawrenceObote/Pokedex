@@ -3,9 +3,9 @@ import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import SearchByName from './components/SearchByName'
 import SearchByNumber from './components/SearchByNumber'
-import PokemonPage from './PokemonPage'
 import axios from 'axios'
-import { Redirect } from 'react-router-dom'
+import Home from './components/Home'
+import PokemonPage from './components/PokemonPage'
 
 
 class App extends Component {
@@ -64,26 +64,11 @@ nextPokemon = (id) => {
     return (
       <Router>
         <div className="App">
-          {/* <div>
-          <nav>
-            <ul id="nav">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/pokemon" onClick={this.previousPokemon}>Previous<br></br>Pokemon</Link>
-              </li>
-              <li>
-                <Link to="/pokemon" onClick={this.nextPokemon}>Next<br/>Pokemon</Link>
-              </li>
-            </ul>
-          </nav>
-        </div> */}
+          
 
         <Switch>
           <Route path="/" exact component={"/"}>
-            <SearchByName />
-            <SearchByNumber />
+            <Home />
           </Route>
 
 
