@@ -34,22 +34,31 @@ margin: .5% 15%;
 
 #search {
   position: absolute;
-  top: 500px;
-  left: 430px;
+  top: 550px;
+  left: 460px;
   width: 100px;
+  height: 25px;
+  border-radius: 15px;
+  border: black solid 2px;
 }
 
 #next {
   position: absolute;
-  top: 500px;
-  left: 530px;
+  top: 550px;
+  left: 570px;
+  height: 30px;
+  border-radius: 15px;
+  border: black solid 2px;
 }
 
 #previous {
   position: absolute;
-  top: 500px;
-  left: 320px;
+  top: 550px;
+  left: 345px;
   width: 90;
+  height: 30px;
+  border-radius: 15px;
+  border: black solid 2px;
 }
 
 #link-to-additional {
@@ -58,4 +67,15 @@ margin: .5% 15%;
   left: 950px;
 }
 
+#nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#image {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
 
