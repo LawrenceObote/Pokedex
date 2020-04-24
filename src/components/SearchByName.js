@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import PokemonPage from './PokemonPage'
 import PokemonImage from './PokemonImage'
-import AdditionalInfo from './AdditionalInfo'
-import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
 
 
 class SearchByName extends Component {
@@ -150,9 +148,6 @@ class SearchByName extends Component {
     render() {
         return (
             <div id="info">
-                <nav>
-                    
-                </nav>
                 <form onSubmit={this.storePokemon}>
                     {/* <label htmlFor="name">Enter Name</label>
                     <input type="text" value={this.state.value} onChange={this.storePokemon} placeholder="Enter Pokemon Name"></input> */}
@@ -187,7 +182,6 @@ class SearchByName extends Component {
                 <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
                 <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button>
 
-                <Link  id="link-to-additional" to="/pokemon2">Additional Info></Link>
 
             </div>
         )
