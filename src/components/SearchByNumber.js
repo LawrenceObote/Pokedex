@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import PokemonPage from '../PokemonPage'
 import { Redirect } from 'react-router-dom'
+import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
+import AdditionalInfo from './AdditionalInfo'
+
 
 class SearchByNumber extends Component {
     constructor(props){
@@ -68,30 +71,25 @@ class SearchByNumber extends Component {
 
     
     render() {
-        if (this.state.toPokemon) {
-            return <Redirect to={this.state.toPokemon} />
-        }
+        
         return (
+            <div>
+            <Link  id="link-to-additional" to="/home">Home</Link>
             <div>
                 <input
                 value={this.state.value}
                 onChange={e => this.onChangeHandler(e)}
                 placeholder="Enter Pokemon"
                 />
-                {/* {this.renderPokemon} */}
-                <PokemonPage
+            </div>
+            <AdditionalInfo 
                 name={this.state.name}
-                type={this.state.type}
-                type2={this.state.type2}
-                id={this.state.id}
                 speed={this.state.speed}
                 specialDefense={this.state.specialDefense}
                 specialAttack={this.state.specialAttack}
                 defense={this.state.defense}
                 attack={this.state.attack}
-                hp={this.state.hp}
-                height={this.state.height}
-                weight={this.state.weight} />
+                hp={this.state.hp}/>
             </div>
         )
     }
