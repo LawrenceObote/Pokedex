@@ -4,6 +4,7 @@ import React from 'react'
 export default function AdditionalInfo(props) {
     return (
         <div className="pokedex">
+            <div id="text">
             <h2>name: {props.name}</h2>
             <h3>speed: {props.speed}</h3>
             <h3>Special Defense: {props.specialDefense}</h3>
@@ -11,6 +12,7 @@ export default function AdditionalInfo(props) {
             <h3>defense: {props.defense}</h3>
             <h3>attack: {props.attack}</h3>
             <h3>hp: {props.hp}</h3>
+            </div>
         </div>
     )
 }
