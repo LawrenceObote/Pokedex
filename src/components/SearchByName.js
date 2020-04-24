@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import PokemonPage from './PokemonPage'
+import PokemonImage from './PokemonImage'
+import AdditionalInfo from './AdditionalInfo'
+import {Route, Switch, Link , BrowserRouter as Router} from "react-router-dom";
+
 
 class SearchByName extends Component {
     constructor(props){
@@ -60,7 +64,7 @@ class SearchByName extends Component {
         this.setState({
             name: pokemon.data.species.name,
             type: pokemon.data.types[0].type.name,
-            // type2: pokemon.data.types[1].type.name,
+            type2: "",
             id: pokemon.data.id,
             speed: pokemon.data.stats[0].base_stat,
             specialDefense: pokemon.data.stats[1].base_stat,
@@ -69,7 +73,8 @@ class SearchByName extends Component {
             attack: pokemon.data.stats[4].base_stat,
             hp: pokemon.data.stats[5].base_stat,
             height: pokemon.data.height,
-            weight: pokemon.data.weight
+            weight: pokemon.data.weight,
+            image: pokemon.data.sprites.front_default
 
         })
         
@@ -86,7 +91,8 @@ class SearchByName extends Component {
                 attack: pokemon.data.stats[4].base_stat,
                 hp: pokemon.data.stats[5].base_stat,
                 height: pokemon.data.height,
-                weight: pokemon.data.weight
+                weight: pokemon.data.weight,
+                image: pokemon.data.sprites.front_default
     
             })
             
@@ -143,7 +149,7 @@ class SearchByName extends Component {
 
     render() {
         return (
-            <div>
+            <div id="info">
                 <nav>
                     
                 </nav>
@@ -153,13 +159,13 @@ class SearchByName extends Component {
                     {/* <button type="submit" value="submit" onSubmit={this.getData}>Search By Name</button>
                     <button type="submit" onSubmit={this.getData}></button> */}
                 </form>
-                <input
+                <input id="search"
                 value={this.state.value}
                 onChange={e => this.onChangeHandler(e)}
                 placeholder="Enter Pokemon"
                 />
-                {/* {this.renderPokemon} */}
-                <PokemonPage
+                
+                 <PokemonPage
                 name={this.state.name}
                 type={this.state.type}
                 type2={this.state.type2}
@@ -171,9 +177,18 @@ class SearchByName extends Component {
                 attack={this.state.attack}
                 hp={this.state.hp}
                 height={this.state.height}
-                weight={this.state.weight} />
+                weight={this.state.weight}
+                image={this.state.image} />
+                
+                <PokemonImage
+                image={this.state.image}
+                 />
+                
+                <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
+                <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button>
 
-                <button onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
+                <Link  id="link-to-additional" to="/pokemon2">Additional Info></Link>
+
             </div>
         )
     }
