@@ -72,17 +72,8 @@ class SearchByNumber extends Component {
         
         return (
             <div>
-                <div>
-                    <Link  id="link-to-home" to="/home">Home</Link>
-                    <Link id="link-to-pokemon-page" to="/pokemon">Pokedex</Link>
-                </div>
-            <div>
-                <input
-                value={this.state.value}
-                onChange={e => this.onChangeHandler(e)}
-                placeholder="Enter Pokemon"
-                />
-            </div>
+                
+            
             <AdditionalInfo 
                 name={this.state.name}
                 speed={this.state.speed}
@@ -91,6 +82,13 @@ class SearchByNumber extends Component {
                 defense={this.state.defense}
                 attack={this.state.attack}
                 hp={this.state.hp}/>
+                <div id="input">
+                <input
+                value={this.state.value}
+                onChange={e => this.onChangeHandler(e)}
+                placeholder="Enter Pokemon"
+                />
+                </div>
             </div>
         )
     }
