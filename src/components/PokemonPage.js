@@ -17,18 +17,14 @@ export default function PokemonPage(props) {
     
         return (
             <div className="pokedex">
-                <div>
+                <div id="text">
                     <h1>Pokemon: <br/>{props.name}</h1>
-                </div>
-                <div>
-                    <h2>Type: {props.type}</h2>
-                    <h2>Type2: {props.type2}</h2>
-                    <h2>Weight: {props.weight}</h2>
-                </div>
-                <div>
-                    <h2>Order Number: {props.id}</h2>
-                    <h2>Stats: </h2>
-                    <h2>Height: {props.height}</h2>
+                    <h4>Type: {props.type}</h4>
+                    <h4>Type2: {props.type2}</h4>
+                    <h4>Weight: {props.weight}</h4>
+                    <h4>Order Number: {props.id}</h4>
+                    <h4>Stats: </h4>
+                    <h4>Height: {props.height}</h4>
                 </div>
                 <PokemonImage />
 
