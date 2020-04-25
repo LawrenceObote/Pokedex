@@ -1,3 +1,5 @@
+/*setting the nav bar to flex and flex-direction row so that they become a row at the top.
+list style none to take away the bullet points. justify content space-between to put an even amount of space-between them*/
 #nav {
 display: flex;
 flex-direction: row;
@@ -6,10 +8,21 @@ justify-content: space-between;
 margin: .5% 15%;
 }
 
+/*centering the welcome to pokedex text and putting a white background and black border to make it visible*/
 #welcome {
+  position: fixed;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  background-color: white;
+  border: black solid 2px;
+
+  
 }
 
+/*Set the background to a pokemon image and center it on the page*/
 #welcome-div {
   text-align: center;
   background-image: url("https://cdn.vox-cdn.com/thumbor/qefrj2eJ3BMUeEhyh4uRV70Rfjk=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/6839749/pokemon.0.png");
@@ -22,6 +35,7 @@ margin: .5% 15%;
   overflow-x: auto;
 }
 
+/*set the background to a pokedex and adjust it so it sits in the middle of the page*/
 .pokedex {
   background-image: url("https://gran4u.xtgem.com/Pokedex.png");
   height: 100vh;
@@ -32,6 +46,7 @@ margin: .5% 15%;
   background-position: center;
 }
 
+/*set the search bar on the pokedex image in the bottom middle*/
 #search {
   position: absolute;
   top: 590px;
@@ -43,6 +58,7 @@ margin: .5% 15%;
   
 }
 
+/*set the next button to be to the right of the search bar*/
 #next {
   position: absolute;
   top: 550px;
@@ -52,6 +68,7 @@ margin: .5% 15%;
   border: black solid 2px;
 }
 
+/*set the previous button to the left of the search bar*/
 #previous {
   position: absolute;
   top: 550px;
@@ -62,6 +79,7 @@ margin: .5% 15%;
   border: black solid 2px;
 }
 
+/*set the previous button to the left of the search bar*/
 .previous{
   position: absolute;
   top: 550px;
@@ -70,6 +88,7 @@ margin: .5% 15%;
   border-radius: 15px;
 }
 
+/*set the next button to the right of the search bar*/
 .next {
   position: absolute;
   top: 550px;
@@ -78,18 +97,21 @@ margin: .5% 15%;
   border-radius:15px;
 }
 
+/*position navbar link*/
 #link-to-additional {
   position: absolute;
   top: 250px;
   left: 950px;
 }
 
+/*set the nav to display flex and space the elements evenly*/
 #nav {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
 
+/*position the image on the right side of the pokedex and make it bigger*/
 #image {
   position: absolute;
   top: 285px;
@@ -99,6 +121,7 @@ margin: .5% 15%;
   
 }
 
+/*position the text on the pokedex*/
 #text {
   position: absolute;
   top: 240px;
