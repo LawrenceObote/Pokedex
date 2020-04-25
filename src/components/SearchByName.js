@@ -8,60 +8,23 @@ import Button from 'react-bootstrap/Button';
 
 
 class SearchByName extends Component {
-    constructor(props){
-        super(props);
-    }
+
 
     state = {
         value: ""
     }
     
 
-   
-
-    // getData = async (value) => {
-    //     try {
-    //     const pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${value}/`)
-            
-    //     this.setState({
-    //         name: pokemon.data.species.name,
-    //         type: pokemon.data.types[0].type.name,
-    //         type2: pokemon.data.types[1].type.name,
-    //         id: pokemon.data.id,
-    //         speed: pokemon.data.stats[0].base_stat,
-    //         specialDefense: pokemon.data.stats[1].base_stat,
-    //         specialAttack: pokemon.data.stats[2].base_stat,
-    //         defense: pokemon.data.stats[3].base_stat,
-    //         attack: pokemon.data.stats[4].base_stat,
-    //         hp: pokemon.data.stats[5].base_stat,
-    //         height: pokemon.data.height,
-    //         weight: pokemon.data.weight
-
-    //     })
-    //     } catch(e) {
-    //         console.error(e)
-    //     }
-        
-    // } 
-
-
-    // onSubmit = (pokemonName) => {
-    //     <Redirect to={ '/${pokemonName}'} /> 
-    // }
-    // goToPokemon = async (e) => {
-    //     try {
-    //         const pokemon = await get('https://pokeapi.co/api/v2/pokemon/' + pokemonName);
-    //     }
-    
-    // }
-
+//Asynchronous search function. Pulls API data then stores it in state
     search = async value => {
+        //storing API data in a variable
         this.setState({loading: true});
         const pokemon = await axios.get(
             `https://pokeapi.co/api/v2/pokemon/${value}/`
         );
-        console.log(pokemon);
+        //Not all pokemon have a second type. The If statement adjusts the data depnding on if they have a second type or not
         if(pokemon.data.types[1] === undefined){
+                    //storing each piece of data in state. 
         this.setState({
             name: pokemon.data.species.name,
             type: pokemon.data.types[0].type.name,
@@ -102,34 +65,16 @@ class SearchByName extends Component {
 
     };
 
+    //Handles the input field text and runs the search function to update state to re render the dom.
+    //Then state is updated to make sure that the dom renders with every key stroke.
     onChangeHandler = async e => {
         console.log(e.target.value);
         this.search(e.target.value);
         this.setState({value: e.target.value.toLowerCase()})
     };
 
-    // renderPokemon = () => {
-    //     let pokemon = <h1>There's no pokemon</h1>
-    //     if(this.state.pokemon) {
-    //         pokemon = <PokemonPage 
-    //         name={this.state.name}
-    //         type={this.state.type}
-    //         type2={this.state.type2}
-    //         id={this.state.id}
-    //         speed={this.state.speed}
-    //         specialDefense={this.state.specialDefense}
-    //         specialAttack={this.state.specialAttack}
-    //         defense={this.state.defense}
-    //         attack={this.state.attack}
-    //         hp={this.state.hp}
-    //         height={this.state.height}
-    //         weight={this.state.weight}
-    //         />
-    //     }
-
-    //     return pokemon;
-    // }
-
+    
+    //Function that handles the previous pokemon press.
     handlePreviousPokemonButton = () => {
         let counter = this.state.id;
         counter = this.state.id - 1;
@@ -137,7 +82,7 @@ class SearchByName extends Component {
         this.setState({ value: counter});
         
     }
-
+    //Function that handles the next pokemon press.
     handleNextPokemonButton = () => {
         let counter = this.state.id;
         counter = this.state.id + 1;
@@ -151,18 +96,14 @@ class SearchByName extends Component {
     render() {
         return (
             <div id="info">
-                <form onSubmit={this.storePokemon}>
-                    {/* <label htmlFor="name">Enter Name</label>
-                    <input type="text" value={this.state.value} onChange={this.storePokemon} placeholder="Enter Pokemon Name"></input> */}
-                    {/* <button type="submit" value="submit" onSubmit={this.getData}>Search By Name</button>
-                    <button type="submit" onSubmit={this.getData}></button> */}
-                </form>
+
+                {/* Setting up input field for the search bar */}
                 <input id="search"
                 value={this.state.value}
                 onChange={e => this.onChangeHandler(e)}
                 placeholder="Enter Pokemon"
                 />
-                
+                  {/* render the pokemon info on the page. passing it as props */}
                  <PokemonPage
                 name={this.state.name}
                 type={this.state.type}
@@ -177,7 +118,7 @@ class SearchByName extends Component {
                 height={this.state.height}
                 weight={this.state.weight}
                  />
-                
+                {/* Displays pokemon image on the page. passing it as props */}
                 <PokemonImage id="image"
                 image={this.state.image}
                  />
