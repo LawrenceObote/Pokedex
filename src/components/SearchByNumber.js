@@ -124,7 +124,7 @@ class SearchByNumber extends Component {
                 <PokemonImage id="image"
                     image={this.state.image}
                  />
-                {/* Buttons that move the id to previous and next pokemon */}
+                {/* Bootstrap Buttons that move the id to previous and next pokemon */}
                 <Button variant="dark" className="previous" onClick={this.handlePreviousPokemonButton}>Previous</Button> 
                 <Button variant="dark"  className="next" onClick={this.handleNextPokemonButton}>Next</Button>
             </div>
