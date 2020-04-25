@@ -5,8 +5,8 @@ import React from 'react'
     
     return (
         <div>
-            
-            <img id="image" src={props.image}></img>
+            {/* displaying the props image that we passed from the parent */}
+            <img id="image" src={props.image} alt="Pokemon Image"></img>
             
         </div>
     )
