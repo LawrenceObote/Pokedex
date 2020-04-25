@@ -11,3 +11,10 @@ Pokemon Fans
 
 ![WireFrame 1](/Wireframe1.png)
 ![WireFrame 2](/Wireframe2.png)
+
+## Sources
+https://alligator.io/react/live-search-with-axios/
+
+https://www.youtube.com/watch?v=GIU8ekYndKw
+
+https://react-bootstrap.github.io/
