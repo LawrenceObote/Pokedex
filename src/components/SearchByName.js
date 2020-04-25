@@ -123,8 +123,7 @@ class SearchByName extends Component {
                 image={this.state.image}
                  />
                 
-                {/* <button id="previous" onClick={this.handlePreviousPokemonButton}>Previous Pokemon</button>
-                <button id="next" onClick={this.handleNextPokemonButton}>Next Pokemon</button> */}
+                {/* Bootstrap buttons for next pokemon and previous pokemon */}
                 <Button variant="dark" className="previous" onClick={this.handlePreviousPokemonButton}>Previous</Button> 
                 <Button variant="dark"  className="next" onClick={this.handleNextPokemonButton}>Next</Button>
 
