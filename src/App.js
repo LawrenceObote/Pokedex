@@ -1,3 +1,4 @@
+//All of the relevant imports
 import React, { Component } from 'react';
 import {Route, Switch, BrowserRouter as Router} from "react-router-dom";
 import './App.css';
@@ -8,72 +9,40 @@ import NavBar from "./components/NavBar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
+//declaring class component
 class App extends Component {
 
 
-
-
-// getData = async (e, value) => {
-//   try {
-//   const pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${value}`)
-//       console.log(pokemon.data.species.name);
-//   this.setState({
-//       name: pokemon.data.species.name,
-//       type: pokemon.data.types[0].type.name,
-//       type2: pokemon.data.types[1].type.name,
-//       id: pokemon.data.id,
-//       speed: pokemon.data.stats[0].base_stat,
-//       specialDefense: pokemon.data.stats[1].base_stat,
-//       specialAttack: pokemon.data.stats[2].base_stat,
-//       defense: pokemon.data.stats[3].base_stat,
-//       attack: pokemon.data.stats[4].base_stat,
-//       hp: pokemon.data.stats[5].base_stat,
-//       height: pokemon.data.height,
-//       weight: pokemon.data.weight
-
-//   })
-//   } catch(e) {
-//       console.error(e)
-//   }
-  
-
-  
-// } 
-previousPokemon = (id) => {
-  this.setState((state) => {
-    return {id: state.id - 1};
-  });
-  console.log(this.state.id)
-}
-
-nextPokemon = (id) => {
-  this.setState((state) => {
-    return {id: this.state.id + 1}
-  });
-}
-
-
+//render method to display my components on the page
   render() {
     return (
+
+      //react router so I can have a functional navbar
       <Router>
+        {/* div for my etire App */}
         <div className="App">
           
-
+        {/* Switch for the router */}
         <Switch>
+
+          {/* route for home that shows what is going to be displayed */}
           <Route path="/" exact component={"/"}>
+            {/* displaying the home component on / page */}
             <Home />
           </Route>
 
-
+          {/* route for the main page */}
           <Route path="/pokemon" exact component={"/pokemon"}>
+            {/* putting navbar on the main page */}
           <NavBar />
-            <SearchByName />
-            
+            {/* putting a search by name option on the /pokemon page. Also allows user to search by number */}
+            <SearchByName /> 
           </Route>
-
+          {/* route for the additional info page */}
           <Route path="/pokemon2" exact component={"/pokemon2"}>
+            {/* putting nav bar on additional info page */}
             <NavBar />
+            {/* displaying search by number component on the /pokemon2 page. allows user to search by name or number */}
           <SearchByNumber />
           
           </Route>
